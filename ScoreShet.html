@@ -7,21 +7,19 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap">
 
   <style>
-    /* ==========================================================
-       1. THEME & BASE
-       ========================================================== */
+ 
     :root {
       --bg: #0e0e10;
       --bg2: #1a1a1e;
-      --gl: rgba(255, 255, 255, .055);   /* glass fill */
-      --bd: rgba(255, 255, 255, .11);    /* border */
-      --tx: #f2f0ec;                     /* text */
-      --mu: #9c9a96;                     /* muted text */
-      --or: #ff4fa3;                     /* main accent (pink) */
-      --or2: #ff8cc6;                    /* light accent */
-      --rd: #ff4d4d;                     /* red / danger */
-      --am: #ffc233;                     /* amber / warning */
-      --gr: #3ddc84;                     /* green */
+      --gl: rgba(255, 255, 255, .055);  
+      --bd: rgba(255, 255, 255, .11);    
+      --tx: #f2f0ec;                   
+      --mu: #9c9a96;                   
+      --or: #ff4fa3;                 
+      --or2: #ff8cc6;                
+      --rd: #ff4d4d;                
+      --am: #ffc233;                  
+      --gr: #3ddc84;                
       color-scheme: dark;
       box-sizing: border-box;
       padding-top: env(safe-area-inset-top, 0px);
@@ -46,16 +44,12 @@
     button, input, select { font: inherit; color: inherit; }
 
     #app { max-width: 1280px; margin: 0 auto; padding: 14px 14px 90px; }
-    #pr  { display: none; }   /* print area, shown only when printing */
+    #pr  { display: none; } 
 
     :focus-visible { outline: 2px solid var(--or2); outline-offset: 2px; }
 
     table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 
-
-    /* ==========================================================
-       2. GENERIC COMPONENTS (logo, buttons, inputs, toast)
-       ========================================================== */
     .logo {
       font: 800 26px/1 'Barlow Condensed', sans-serif;
       letter-spacing: .06em;
@@ -128,10 +122,6 @@
       z-index: 9;
     }
 
-
-    /* ==========================================================
-       3. HOME SCREEN (game list)
-       ========================================================== */
     .gl {
       display: grid;
       gap: 10px;
@@ -166,11 +156,7 @@
       border-radius: 18px;
       grid-column: 1 / -1;
     }
-
-
-    /* ==========================================================
-       4. GAME INFO PANEL
-       ========================================================== */
+    
     .info { padding: 12px 14px; margin-bottom: 12px; overflow: hidden; }
     .info summary { cursor: pointer; font-weight: 600; }
     .info label   { display: block; margin: 0 0 4px; color: var(--mu); font-size: 12px; }
@@ -200,10 +186,6 @@
     .ig input[type=date]   { padding: 4px 6px; font-size: 13px; }
     .ig input[type=number] { -moz-appearance: textfield; }
 
-
-    /* ==========================================================
-       5. SCOREBOARD & QUARTER TABLE
-       ========================================================== */
     .sb { padding: 14px; margin-bottom: 12px; }
 
     .sbt {
@@ -234,10 +216,6 @@
     .qs tr.cur td { background: rgba(255, 79, 163, .14); }
     .qs tr.tot td { font-weight: 700; border-bottom: 0; color: var(--or2); }
 
-
-    /* ==========================================================
-       6. QUARTER BAR & MOBILE TEAM TABS
-       ========================================================== */
     .qb {
       display: flex;
       gap: 8px;
@@ -266,10 +244,6 @@
     .tt .btn { flex: 1; text-align: center; }
     .tt .btn.pri { font-weight: 700; }
 
-
-    /* ==========================================================
-       7. TEAM PANELS
-       ========================================================== */
     .teams {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -315,10 +289,6 @@
     }
     .tq.cur { color: var(--or2); font-weight: 700; }
 
-
-    /* ==========================================================
-       8. PLAYER CARDS
-       ========================================================== */
     .pl {
       background: rgba(0, 0, 0, .3);
       border: 1px solid var(--bd);
@@ -393,10 +363,6 @@
     .ed  { display: flex; gap: 8px; align-items: center; }
     .add { display: flex; gap: 8px; margin-top: 10px; }
 
-
-    /* ==========================================================
-       9. RESPONSIVE
-       ========================================================== */
     @media (max-width: 900px) {
       .teams { grid-template-columns: 1fr; }
       .team { display: none; }
@@ -413,10 +379,6 @@
       * { transition: none !important; }
     }
 
-
-    /* ==========================================================
-       10. PRINT
-       ========================================================== */
     @media print {
       @page { size: A4 landscape; margin: 8mm; }
 
@@ -441,9 +403,6 @@
   <div id="pr"></div>
 
   <script>
-    /* ==========================================================
-       1. CONSTANTS & STATE
-       ========================================================== */
     const $ = s => document.querySelector(s);
 
     const Q  = ['Q1', 'Q2', 'Q3', 'Q4'];   // quarter labels
